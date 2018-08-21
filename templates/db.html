@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Database{% endblock %}
+
+{% block body %}
+	<div class="page-header">
+		<ul>
+		{% for user in datas %}
+			<li><a href="#">{{user}}</a> </li>
+		{% endfor %}
+		</ul>
+		<button class="btn btn-default" onclick="black_index()"><a href="/">返回登陆界面</a></button>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Class>
+	<student>
+		<name>ZhangSan</name>
+		<age>20</age>
+		<city>shengzhen</city>
+	</student>
+	
+	<student>
+		<name>LiSi</name>
+		<age>32</age>
+		<city>beijing</city>
+	</student>
+	
+	<student>
+		<name>XiaoHong</name>
+		<age>18</age>
+		<city>shanghai</city>
+	</student>
+	
+	<teacher>
+		<name>XiaYu</name>
+		<age>32</age>
+		<city>dongguang</city>
+	</teacher>
+	
+	<account>
+		<login username="student1" password="123456" />
+		<login username="student2" password="938282" />
+	</account>
+</Class>
