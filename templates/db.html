@@ -1,14 +1,41 @@
-{% extends "base.html" %}
+{% extends "layout.html" %}
 
 {% block title %}Database{% endblock %}
 
+{% block style %}
+	.center_content {
+		margin-left: auto; 
+		margin-right: auto; 
+		display: block;
+		float: none;
+		margin-top: 5em;
+	}
+{% endblock%}
+
 {% block body %}
-	<div class="page-header">
-		<ul>
-		{% for user in datas %}
-			<li><a href="#">{{user}}</a> </li>
-		{% endfor %}
-		</ul>
-		<button class="btn btn-default" onclick="black_index()"><a href="/">返回登陆界面</a></button>
-    </div>
+	<div class="container ">
+		<div class="center_content col-xs-10 col-sm-8 col-md-6 col-lg-4">
+			<table border="1" width="50%" cellpadding="0" cellspacing="0" style="text-align: center; float: left">
+			<tr>
+				<td>ID</td>
+			</tr>
+			{% for user_id in datas_id %}
+				<tr>
+					<td>{{user_id}}</td>
+				</tr>
+			{% endfor %}
+			</table>
+			<table border="1" width="50%" cellpadding="0" cellspacing="0" style="text-align: center">
+				<tr>
+					<td>用户</td>
+				</tr>
+				{% for user in datas %}
+					<tr>
+						<td>{{user}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+			<button class="btn btn-default" onclick="black_index()"><a href="/">返回登陆界面</a></button>
+		</div>
+	</div>
 {% endblock %}

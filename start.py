@@ -66,20 +66,6 @@ def execute_query(sql, args=()):
     con.close()
     return datas
 
-@app.route('/db')
-def result():
-    user = []
-    con = sqlite3.connect('mysql.db')
-    curs = con.cursor()
-    sql = 'select * from mes'
-    curs.execute(sql)
-    datas = curs.fetchall()
-    curs.close()
-    con.close()
-    for data in datas:
-        user.append(data[1])
-        print user
-    return render_template('db.html', datas=user)
 
 @app.route('/user_registe', methods=['POST'])
 def user_registe():
@@ -143,6 +129,24 @@ def page_error(error):
 #         cnt=cnts[0][0]
 #     if cnt > 0:
 #         print cnt
+
+@app.route('/db')
+def result():
+    user = []
+    user_id = []
+    con = sqlite3.connect('mysql.db')
+    curs = con.cursor()
+    sql = 'select * from mes'
+    curs.execute(sql)
+    datas = curs.fetchall()
+    curs.close()
+    con.close()
+    for data in datas:
+        user_id.append(data[0])
+        user.append(data[1])
+    print (user)
+    return render_template('db.html', datas=user, datas_id=user_id)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
