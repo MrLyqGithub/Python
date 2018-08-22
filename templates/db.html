@@ -13,6 +13,7 @@
 {% endblock%}
 
 {% block body %}
+<<<<<<< HEAD
 	<div class="container ">
 		<div class="center_content col-xs-10 col-sm-8 col-md-6 col-lg-4">
 			<table border="1" width="50%" cellpadding="0" cellspacing="0" style="text-align: center; float: left">
@@ -39,3 +40,14 @@
 		</div>
 	</div>
 {% endblock %}
+=======
+    <div class="page-header">
+        <ul>
+	{% for user in datas %}
+	    <li><a href="#">{{user}}</a> </li>
+	{% endfor %}
+	</ul>
+	<button class="btn btn-default" onclick="black_index()"><a href="/">返回登陆界面</a></button>
+    </div>
+{% endblock %}
+>>>>>>> a5407f36064aac279bd441212f7fa3e048ee88a9
